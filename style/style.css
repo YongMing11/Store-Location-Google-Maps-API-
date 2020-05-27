@@ -67,7 +67,16 @@ body {
     bottom: 20px;
 }
 .stores-list{
-    padding: 20px;
+    padding: 10px;
+    padding-left: 22px;
+    cursor: pointer;
+}
+.stores-list-container :hover{
+    padding:15px;
+    background-color: burlywood;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 15px;
 }
 
 .stores-list .store-address{
@@ -80,8 +89,13 @@ body {
     color: grey;
 }
 
-.stores-list-container i{
+.store-address i{
     color: black;
-    font-size: 10px;
+    font-size: 50px;
+}
+hr{
+    font-weight: bold;
+    width: 90%;
+    background-color: black;
 }
 

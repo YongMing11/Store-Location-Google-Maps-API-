@@ -14,15 +14,15 @@ body {
     top:100px;
     left:100px;
     z-index:10;
-    font-size: 80px;
+    font-size: 50px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .search-container{
-    width: 400px;
-    height: 60px;
-    top: 200px;
+    width: 350px;
+    height: 45px;
+    top: 180px;
     left: 100px;
     z-index: 30;
     position: absolute;
@@ -56,46 +56,78 @@ body {
 }
 
 .stores-list-container{
-    width:400px;
-    height:400px;
+    width:350px;
+    /* height:400px; */
     background-color: white;
     position: absolute;
     z-index:30;
-    top: 280px;
+    top: 250px;
     left:100px;
     border-radius: 30px; 
     bottom: 20px;
 }
 .stores-list{
-    padding: 10px;
-    padding-left: 22px;
-    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: scroll;
+    height: 100%;
 }
-.stores-list-container :hover{
+/* .stores-list-container :hover{
     padding:15px;
     background-color: burlywood;
     font-size: 22px;
     font-weight: bold;
     border-radius: 15px;
-}
+} */
 
-.stores-list .store-address{
-    font-size: 20px;
-    font-weight: bold;
-}
-.stores-list .store-phone-number{
+/* .stores-list .store-address{
+    color: #514C4C;
+    font-size: 21px;
+    margin-top: 30px;
+} */
+/* .stores-list .store-phone-number{
     padding-top: 7px;
     font-size: 13px;
     color: grey;
+} */
+.store-container{
+    display: flex;
+    border-bottom: 1px solid #979797
 }
 
-.store-address i{
-    color: black;
-    font-size: 50px;
+.store-info-container{
+    flex-grow:1;
 }
-hr{
-    font-weight: bold;
-    width: 90%;
-    background-color: black;
+
+.store-address{
+    font-size: 21px;
+    color: #514C4C;
+    margin-top: 30px;
+}
+
+.store-phone-number{
+    color: #B5ADAD;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.store-number-container{
+    align-items: center;
+    display: flex;
+}
+
+.store-number{
+    width: 30px;
+    height: 30px;
+    background-color: #454E53;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.store-address span{
+    display:block;
 }
 

@@ -3,12 +3,16 @@ var markers=[];
 var infoWindow;
 
 function initMap() {
-    var losAngeles = {
-        lat: 34.063380,
-        lng: -118.358080
+    // var losAngeles = {
+    //     lat: 34.063380,
+    //     lng: -118.358080
+    // }
+    var kualaLumpur = {
+        lat: 3.139003,
+        lng: 101.686855
     }
     map = new google.maps.Map(document.getElementById('map'), {
-        center: losAngeles,
+        center: kualaLumpur,
         zoom: 8
     });
     infoWindow = new google.maps.InfoWindow();
@@ -20,7 +24,7 @@ function searchStores(){
     var zipCode = document.getElementById("zip-code-input").value;
     if(zipCode){
     stores.forEach(function(store){
-        var postal = store.address.postalCode.substring(0,5);
+        var postal = store.address.postalCode;
         if(postal == zipCode){
             foundStores.push(store);
         }
@@ -57,7 +61,9 @@ function displayStores(foundStores){
     var storesHtml="";
     foundStores.forEach(function(store,index){
         var address = store.addressLines;
-        var phone = store.phoneNumber;
+        if(store.phoneNumber!=null){
+        var phone = store.phoneNumber;}
+        else{var phone = "Contact number not available"}
         storesHtml += `
             <div class="store-container">
             <div class="store-container-background">
@@ -88,7 +94,9 @@ function showStoresMarkers(stores){
         var name = store.name;
         var address = store.addressLines[0];
         var statusText = store.openStatusText;
-        var phone = store.phoneNumber;
+        if(store.phoneNumber!=null){
+            var phone = store.phoneNumber;
+        }else{var phone = "Contact number not available"}
         bounds.extend(latlng);
         createMarker(latlng,name,address,statusText,phone,index);
     });

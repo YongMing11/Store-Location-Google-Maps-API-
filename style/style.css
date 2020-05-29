@@ -182,3 +182,7 @@ body {
 .store-container-background:hover{
     background-color: #CCCCCC;
 }
+
+.search i{
+    cursor: pointer;
+}
